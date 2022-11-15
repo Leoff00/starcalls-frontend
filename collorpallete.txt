@@ -1,0 +1,7 @@
+Red Tones: #E32124, #E54547
+
+Purple Tones: #9B62DB, #9E51F3, #6F00E9
+
+White Tones: #FFFFFF, #EFEFEF
+
+Black Tones: #020202, #2D2D2D, #353535, #2f2f2f 

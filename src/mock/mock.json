@@ -1,0 +1,21 @@
+{
+    "data": {
+        "qa": [
+            {
+                "q_id": 1,
+                "question": "Qual a cor do sol?",
+                "answer": "Amarelo"
+            },
+            {
+                "q_id": 2,
+                "question": "De onde eu vim?",
+                "answer": "Do útero da sua mãe."
+            },
+            {
+                "q_id": 3,
+                "question": "Como posso abrir um chamado na Claro",
+                "answer": "Para abrir chamados, o número é (555) 555-555"
+            }
+        ]
+    }
+}
