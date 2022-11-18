@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import Banner from './components/Banner.vue';
+import Footer from './components/Footer.vue';
 import Header from './components/Header.vue';
 import Questions from './components/Questions.vue';
 </script>
 
 <template>
- <Header />
- <Questions />
+    <Header />
+    <Questions />
+    <Footer />
 </template>
 
 <style scoped>
+
 </style>
