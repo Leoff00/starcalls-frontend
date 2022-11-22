@@ -1,24 +1,27 @@
 {
-    "data": {
-        "qa": [
-            {
-                "q_id": 1,
-                "question": "Qual a cor do sol?",
-                "answers": ["Amarelo.", "As vezes pode ser amarelo ou branco."]
-            },
-            {
-                "q_id": 2,
-                "question": "De onde eu vim?",
-                "answers": ["Do útero da sua mãe.", "Da barriga da sua mãe"]
-            },
-            {
-                "q_id": 3,
-                "question": "Como posso abrir um chamado na Claro",
-                "answers": [
-                    "Para abrir chamados, o número é (555) 555-555",
-                    "numero na descrição"
-                ]
-            }
-        ]
+  "data": [
+    {
+      "q_id": 1,
+      "question": "Qual a cor do sol?",
+      "answers": [
+        "Amarelo.",
+        "As vezes pode ser amarelo ou branco.",
+        "ele é uma estrela.",
+        "Gigante amarelo!"
+      ]
+    },
+    {
+      "q_id": 2,
+      "question": "De onde eu vim?",
+      "answers": ["Do útero da sua mãe.", "Da barriga da sua mãe."]
+    },
+    {
+      "q_id": 3,
+      "question": "Como posso abrir um chamado na Claro?",
+      "answers": [
+        "Para abrir chamados, o número é (555) 555-555",
+        "numero na descrição."
+      ]
     }
+  ]
 }
