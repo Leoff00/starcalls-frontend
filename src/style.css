@@ -1,6 +1,7 @@
 :root {
   font-size: 1rem;
   line-height: 2rem;
+  background-color: var(--white-tone-bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,6 +16,7 @@
   
   --white-tone-primary:#f0f0f0;
   --white-tone-secondary: #EFEFEF;
+  --white-tone-bg: #e7e7e7;
   --white-tone-header: #dddddd;
   
   
