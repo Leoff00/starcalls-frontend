@@ -1,19 +1,20 @@
 <template>
   <div class="qa-container column m-6">
     <div class="mt-2 is-flex is-justify-content-space-between is-align-items-center">
-      <h3 class="is-size-3">{{ items.question }}</h3>
+      <h3 class="is-size-3">{{ items?.question }}</h3>
       <figure class="image is-32x32">
         <button @click="limit++">
           <img src="../assets/plus.svg" alt="Carregar mais">
         </button>
       </figure>
     </div>
-    <Answers :answers="items.answers" :limit="limit" />
+    <p class="is-size-6" v-for="(answer, index) in limitedAnswers" :key="index">
+      {{ answer }}
+    </p>
   </div>
 </template>
 <script setup lang="ts">
-import Answers from "./Answers.vue";
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 interface Props {
   items: {
@@ -22,7 +23,11 @@ interface Props {
   };
 }
 
-defineProps<Props>();
+const limitedAnswers = computed(() => {
+  return props.items.answers.slice(0, limit.value);
+});
+
+const props = defineProps<Props>();
 
 const limit = ref(1);
 </script>
@@ -48,5 +53,4 @@ button {
 button:hover {
   transform: scale(1.225);
 }
-
 </style>
