@@ -1,6 +1,9 @@
+
+// ! FIX
 <template>
     <section>
-        <Input />
+
+        <Input @new-q="data.push()" />
         <section v-for="items in data" :key="items.q_id" class="container">
             <Question :items="items" />
         </section>

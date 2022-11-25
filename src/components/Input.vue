@@ -4,25 +4,17 @@
     <div class="control column">
       <input class="input" v-model="newQuestion" type="text" placeholder="Question...">
     </div>
-    <button class="button">Submit</button>
-    <p>{{ capitalize() }}</p>
+    <button class="button" @click="createQuestion">Submit</button>
   </section>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
 
-// interface Props {
-//   items: {
-//     q_id: number;
-//     question: string;
-//   };
-// }
-// const props = defineProps<Props>()
-
+const emit = defineEmits(['new-q'])
 const newQuestion = ref("")
 
-function capitalize() {
-  return newQuestion.value.charAt(0).toUpperCase() + newQuestion.value.slice(1)
+function createQuestion() {
+  emit('new-q', newQuestion.value)
 }
 
 </script>
