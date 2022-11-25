@@ -1,16 +1,26 @@
-
-// ! FIX
 <template>
     <section>
-
-        <Input @new-q="data.push()" />
-        <section v-for="items in data" :key="items.q_id" class="container">
+        <Input @submitted="pushData" />
+        <section v-for="items in recData" :key="items.q_id" class="container">
             <Question :items="items" />
         </section>
     </section>
 </template>
 <script lang="ts" setup>
-import { data } from "../mock/mock.json"
+import { ref } from "vue"
 import Question from "./QandA.vue"
 import Input from "./Input.vue";
+
+interface QAProps {
+    q_id: number;
+    question: string;
+    answers: Array<string>;
+}
+
+const recData = ref<Array<QAProps>>([])
+
+function pushData(question: string) {
+    recData?.value?.push({ q_id: 1, question, answers: [''] })
+}
+
 </script>
