@@ -8,6 +8,7 @@
         </button>
       </figure>
     </div>
+    <AnswerInputVue @submit-answer="pushAnswer" />
     <p class="is-size-6" v-for="(answer, index) in limitedAnswers" :key="index">
       {{ answer }}
     </p>
@@ -15,6 +16,7 @@
 </template>
 <script setup lang="ts">
 import { ref, computed } from "vue";
+import AnswerInputVue from "./AnswerInput.vue";
 
 interface Props {
   items: {
@@ -23,20 +25,26 @@ interface Props {
   };
 }
 
+function pushAnswer(answer: string) {
+  props.items.answers.push(answer)
+}
 
 const limitedAnswers = computed(() => {
   return props.items.answers.slice(0, limit.value);
 });
 
+
 const props = defineProps<Props>();
 
-const limit = ref(1);
+const limit = ref(2);
 </script>
 <style scoped>
 .qa-container {
   background: var(--white-tone-secondary);
   border-radius: 1rem;
+  cursor: pointer;
 }
+
 
 h3 {
   font-weight: 300;

@@ -15,6 +15,7 @@ const newQuestion = ref("")
 
 const capitalize = computed(() => newQuestion.value.charAt(0).toUpperCase() + newQuestion.value.slice(1))
 
+
 </script>
 <style scoped>
 h2 {
